@@ -1,7 +1,7 @@
 import './App.css'
-import Heading from './Heading'
-import Message from './Message'
-import ListOfMeal from './ListOfMeal'
+import Heading from './component/Heading'
+import Message from './component/Message'
+import ListOfMeal from './component/ListOfMeal'
 
 function App() {
 
