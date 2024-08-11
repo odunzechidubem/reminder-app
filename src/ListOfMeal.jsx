@@ -1,12 +1,12 @@
 
-const date = new Date();
-// const date = new Date(2024, 9, 8, 20); 
+// const date = new Date();
+const date = new Date(2024, 9, 8, 18); 
 const currentTime = date.getHours();
 
 const meal = ["Noodles", "Pasta", "Porridge", "Soup"];
 let list = meal;
 
-if (currentTime < 20) {
+if (currentTime < 20 && currentTime > 17) {
   list = meal; 
 } else {
     list = [];
