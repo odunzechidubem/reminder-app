@@ -1,6 +1,6 @@
 
-// const date = new Date();
-const date = new Date(2024, 9, 8, 18); 
+const date = new Date();
+// const date = new Date(2024, 9, 8, 18); 
 const currentTime = date.getHours();
 
 const meal = ["Noodles", "Pasta", "Porridge", "Soup"];
