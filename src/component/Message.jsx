@@ -24,6 +24,9 @@ function Message() {
     // Check if it's the weekend (Saturday or Sunday)
     if (currentDay === 0 || currentDay === 6) {
         doSomething = `Relax, it's ${currentDay === 0 ? "Sunday" : "Saturday"}`;
+        if (currentTime >= 16 && currentTime < 20) {
+            whatToEat = "What to Eat:";
+        }
     } else if (currentTime < 12) {
         doSomething = "Get to Work";
     } else if (currentTime < 16) {
@@ -49,10 +52,10 @@ function Message() {
     return (
         <div>
             <h3>
-                Today is {fullDate} and The time is {fullTime} 
+                Today is <span style={{ color: "red" }}>{fullDate}</span> <br /> The time is <span style={{ color: "red" }}>{fullTime}</span>
             </h3>
-            <h1 className="message">{doSomething}!</h1>
-            <p style={{ textAlign: "left", marginLeft: "100px" }}>{whatToEat}</p>
+            <h1 className="message">{doSomething}</h1>
+            <p className="center">{whatToEat}</p>
         </div>
     );
 }
