@@ -1,20 +1,20 @@
 
 const date = new Date();
-// const date = new Date(2024, 9, 8, 18); 
+// const date = new Date(2024, 9, 8, 17); 
 const currentTime = date.getHours();
 
 const meal = ["Noodles", "Pasta", "Porridge", "Soup", "Puddin"];
 let list = meal;
 
-if (currentTime < 20 && currentTime > 17) {
-  list = meal; 
+if (currentTime > 16 && currentTime < 20) {
+  list = meal;
 } else {
-    list = [];
+  list = [];
 }
 
 function ListOfMeal() {
   return (
-    <ol className="center" type="a" style={{listStyleType: "none", marginLeft: "-10%"}}>
+    <ol className="center" type="a" style={{ listStyleType: "none" /*, marginLeft: "-10%" */}}>
       {list.length > 0 ? (
         list.map((meal, index) => <li key={index}>{meal}</li>)
       ) : (

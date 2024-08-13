@@ -43,6 +43,11 @@ li, p {
     font-size: 20px;
     font-weight: bold;
   }
+
+  .center {
+    text-align: center;
+    margin-left: -7%;
+   }
 }
 
 @media (max-width: 480px) {
@@ -58,4 +63,9 @@ li, p {
     font-size: 20px;
     font-weight: bold;
   }
+
+  .center {
+    text-align: center;
+    margin-left: -7%;
+   }
 }
