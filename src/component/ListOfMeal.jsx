@@ -6,8 +6,8 @@ const currentTime = date.getHours();
 const meal = ["Noodles", "Pasta", "Porridge", "Soup", "Puddin"];
 let list = meal;
 
-if (currentTime > 16 && currentTime < 20) {
-  list = meal;
+if (currentTime < 20 && currentTime > 17) {
+  list = meal; 
 } else {
   list = [];
 }
