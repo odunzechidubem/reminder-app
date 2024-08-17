@@ -24,16 +24,16 @@ function Message() {
     // Check if it's the weekend (Saturday or Sunday)
     if (currentDay === 0 || currentDay === 6) {
         doSomething = `Relax, it's ${currentDay === 0 ? "Sunday" : "Saturday"}`;
-        // if (currentTime > 16 && currentTime < 20) {
-        //     whatToEat = "What to Eat:";
-        // }
+        if (currentTime > 16 && currentTime < 20) {
+            whatToEat = "What to Eat:";
+        }
     } else if (currentTime < 12) {
         doSomething = "Get to Work";
     } else if (currentTime < 16) {
         doSomething = "Time for Lunch";
     } else if (currentTime > 16 && currentTime < 20) {
         doSomething = "Time for Dinner";
-        whatToEat = "What to Eat:";
+        // whatToEat = "What to Eat:";
     } else {
         doSomething = "Time to Sleep";
     }
