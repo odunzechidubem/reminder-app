@@ -28,14 +28,14 @@ function Message() {
             whatToEat = "What to Eat:";
         }
     } else if (currentTime >= 6 && currentTime < 12) {
-        doSomething = "Get to Work";
+        doSomething = "Get to Work.";
     } else if (currentTime >= 12 && currentTime < 16) {
-        doSomething = "Time for Lunch";
+        doSomething = "Time for Lunch.";
     } else if (currentTime >= 16 && currentTime < 20) {
-        doSomething = "Time for Dinner";
+        doSomething = "Time for Dinner.";
         whatToEat = "What to Eat:";
     } else {
-        doSomething = "You should be in bed";
+        doSomething = "You should be in bed.";
     }
 
     // Options for displaying full day and month names
