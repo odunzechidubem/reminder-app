@@ -35,7 +35,7 @@ function Message() {
         doSomething = "Time for Dinner";
         whatToEat = "What to Eat:";
     } else {
-        doSomething = "Time to Sleep";
+        doSomething = "You should be in bed";
     }
 
     // Options for displaying full day and month names
