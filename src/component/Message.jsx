@@ -27,7 +27,7 @@ function Message() {
         if (currentTime > 16 && currentTime < 20) {
             whatToEat = "What to Eat:";
         }
-    } else if (currentTime < 12) {
+    } else if (currentTime < 12 && currentTime > 5) {
         doSomething = "Get to Work";
     } else if (currentTime < 16) {
         doSomething = "Time for Lunch";
