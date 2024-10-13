@@ -3,7 +3,7 @@ const date = new Date();
 // const date = new Date(2024, 9, 8, 17); 
 const currentTime = date.getHours();
 
-const meal = ["Noodles", "Pasta", "Porridge", "Soup", "Puddin"];
+const meal = ["Noodles", "Pasta", "Porridge", "Soup", "Puddin", "Jollof"];
 let list = meal;
 
 if (currentTime > 16 && currentTime < 20) {

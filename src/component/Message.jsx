@@ -1,5 +1,17 @@
 import { useState, useEffect } from "react";
 
+function PageTitleUpdater({ title }) {
+    useEffect(() => {
+        // Update the document title when the component mounts
+        document.title = title;
+
+        // Cleanup function to reset the title when the component unmounts
+        return () => {
+            document.title = "Default Title"; // Reset to a default title if needed
+        };
+    }, [title]);
+}
+
 function Message() {
     // State to store the current date and time
     const [dateTime, setDateTime] = useState(new Date());
@@ -33,7 +45,6 @@ function Message() {
         doSomething = "Time for Lunch";
     } else if (currentTime > 16 && currentTime < 20) {
         doSomething = "Time for Dinner";
-        whatToEat = "What to Eat:";
     } else {
         doSomething = "Time to Sleep";
     }
@@ -51,11 +62,12 @@ function Message() {
 
     return (
         <div>
+            <PageTitleUpdater title={doSomething} />
             <h3>
                 Today is <span style={{ color: "red" }}>{fullDate}</span> <br /> The time is <span style={{ color: "red" }}>{fullTime}</span>
             </h3>
             <h1 className="message">{doSomething}</h1>
-            <p className="center" style={{marginLeft: "6%"}}>{whatToEat}</p>
+            <p className="center" style={{ marginLeft: "6%" }}>{whatToEat}</p>
         </div>
     );
 }
