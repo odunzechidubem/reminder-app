@@ -36,17 +36,18 @@ function Message() {
     // Check if it's the weekend (Saturday or Sunday)
     if (currentDay === 0 || currentDay === 6) {
         doSomething = `Relax, it's ${currentDay === 0 ? "Sunday" : "Saturday"}`;
-        if (currentTime > 16 && currentTime < 20) {
-            whatToEat = "What to Eat:";
-        }
+        // if (currentTime > 16 && currentTime < 20) {
+        //     whatToEat = "What to Eat:";
+        // }
     } else if (currentTime < 12) {
         doSomething = "Get to Work";
     } else if (currentTime < 16) {
         doSomething = "Time for Lunch";
     } else if (currentTime > 16 && currentTime < 20) {
         doSomething = "Time for Dinner";
+        whatToEat = "What to Eat:";
     } else {
-        doSomething = "Time to Sleep";
+        doSomething = "You should be in bed.";
     }
 
     // Options for displaying full day and month names
@@ -64,7 +65,8 @@ function Message() {
         <div>
             <PageTitleUpdater title={doSomething} />
             <h3>
-                Today is <span style={{ color: "red" }}>{fullDate}</span> <br /> The time is <span style={{ color: "red" }}>{fullTime}</span>
+                Today is <span style={{ color: "red" }}>{fullDate}</span> <br /> 
+                The time is <span style={{ color: "red" }}>{fullTime}</span>
             </h3>
             <h1 className="message">{doSomething}</h1>
             <p className="center" style={{ marginLeft: "6%" }}>{whatToEat}</p>
